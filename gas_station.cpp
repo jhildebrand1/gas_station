@@ -73,7 +73,7 @@ class MyQueue
         { 
             return (m_queue.front()); 
         }
-        bool empty(void) { return m_queue.size()<=0; } }
+        bool empty(void) { return m_queue.size()<=0; }
     private:
         std::queue<T> m_queue;
         mutable std::mutex m_mutex;    
