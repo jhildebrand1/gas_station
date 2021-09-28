@@ -99,10 +99,9 @@ class GasPump : public Metrics
 {
     public:
         GasPump(int id) : Metrics("Pump", id) { }
-        // Returns: true if 'lock' was obtained and car can use pump, false otherwise
+        // Simulate time to pump gas by putting thread to sleep
         void PumpGas(void) 
         {
-            // Simulate time to pump gas by putting thread to sleep
             std::this_thread::sleep_for(std::chrono::milliseconds(PUMP_TIME_MS)); 
             Inc(); 
         }
